@@ -6,7 +6,7 @@ const logger = import('./lib/logger');
 const config = import('./config');
 const servers = import('./servers');
 
-const app = new App();
+const app = App();
 
 servers.forEach((server, serverId) => {
 	// Assign a generated color for each servers.json entry if not manually defined

@@ -1,7 +1,7 @@
-const App = await import('./lib/app');
-const ServerRegistration = await import('./lib/servers');
+const App = await import('./lib/app.js');
+const ServerRegistration = await import('./lib/servers.js');
 
-const logger = await import('./lib/logger');
+const logger = await import('./lib/logger.js');
 
 const config = await import('./config');
 const servers = await import('./servers');

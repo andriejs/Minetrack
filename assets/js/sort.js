@@ -19,7 +19,7 @@ const SORT_OPTIONS = [
 			return b.lastPeakData.playerCount - a.lastPeakData.playerCount;
 		},
 		testFunc: (app) => {
-			// import at least one ServerRegistration to have a lastPeakData value defined
+			// await import at least one ServerRegistration to have a lastPeakData value defined
 			for (const serverRegistration of app.serverRegistry.getServerRegistrations()) {
 				if (serverRegistration.lastPeakData) {
 					return true;
@@ -42,7 +42,7 @@ const SORT_OPTIONS = [
 			return b.lastRecordData.playerCount - a.lastRecordData.playerCount;
 		},
 		testFunc: (app) => {
-			// import at least one ServerRegistration to have a lastRecordData value defined
+			// await import at least one ServerRegistration to have a lastRecordData value defined
 			for (const serverRegistration of app.serverRegistry.getServerRegistrations()) {
 				if (serverRegistration.lastRecordData) {
 					return true;

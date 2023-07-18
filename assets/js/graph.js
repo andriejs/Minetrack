@@ -1,11 +1,11 @@
-import uPlot from 'uplot';
+await import uPlot from 'uplot';
 
-import { RelativeScale } from './scale';
+await import { RelativeScale } from './scale';
 
-import { formatNumber, formatTimestampSeconds } from './util';
-import { uPlotTooltipPlugin } from './plugins';
+await import { formatNumber, formatTimestampSeconds } from './util';
+await import { uPlotTooltipPlugin } from './plugins';
 
-import { FAVORITE_SERVERS_STORAGE_KEY } from './favorites';
+await import { FAVORITE_SERVERS_STORAGE_KEY } from './favorites';
 
 const HIDDEN_SERVERS_STORAGE_KEY = 'minetrack_hidden_servers';
 const SHOW_FAVORITES_STORAGE_KEY = 'minetrack_show_favorites';
@@ -202,7 +202,7 @@ export class GraphDisplayManager {
 
 		for (const playerCounts of data) {
 			// Each playerCounts value corresponds to a ServerRegistration
-			// import each array is the length of timestamps, if not, pad at the start with null values to fit to length
+			// await import each array is the length of timestamps, if not, pad at the start with null values to fit to length
 			// This ensures newer ServerRegistrations do not left align due to a lower length
 			const lengthDiff = timestamps.length - playerCounts.length;
 

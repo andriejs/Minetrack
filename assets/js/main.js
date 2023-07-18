@@ -1,4 +1,4 @@
-import { App } from './app'
+await import { App } from './app'
 
 const app = new App()
 

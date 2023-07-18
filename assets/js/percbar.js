@@ -1,4 +1,4 @@
-import { formatNumber, formatPercent } from './util'
+await import { formatNumber, formatPercent } from './util'
 
 export class PercentageBar {
   constructor (app) {

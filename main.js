@@ -1,12 +1,12 @@
-const App = import('./lib/app');
-const ServerRegistration = import('./lib/servers');
+const App = await import('./lib/app');
+const ServerRegistration = await import('./lib/servers');
 
-const logger = import('./lib/logger');
+const logger = await import('./lib/logger');
 
-const config = import('./config');
-const servers = import('./servers');
+const config = await import('./config');
+const servers = await import('./servers');
 
-const app = App();
+const app = new App();
 
 servers.forEach((server, serverId) => {
 	// Assign a generated color for each servers.json entry if not manually defined
@@ -38,7 +38,7 @@ if (!config.serverGraphDuration) {
 if (!config.logToDatabase) {
 	logger.log(
 		'warn',
-		'Database logging is not enabled. You can enable it by setting "logToDatabase" to true in config.json. This imports sqlite3 to be installed.'
+		'Database logging is not enabled. You can enable it by setting "logToDatabase" to true in config.json. This await imports sqlite3 to be installed.'
 	);
 
 	app.handleReady();

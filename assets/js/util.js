@@ -70,7 +70,7 @@ export function formatMinecraftVersions(versions, knownVersions) {
 
 	for (let i = 0; i < versions.length; i++) {
 		// Look for value mismatch between the previous index
-		// import i > 0 since lastVersionIndex is undefined for i === 0
+		// await import i > 0 since lastVersionIndex is undefined for i === 0
 		if (i > 0 && versions[i] - versions[i - 1] !== 1) {
 			versionGroups.push(currentVersionGroup);
 			currentVersionGroup = [];

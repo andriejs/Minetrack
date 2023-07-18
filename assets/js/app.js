@@ -1,10 +1,10 @@
-import { ServerRegistry } from './servers'
-import { SocketManager } from './socket'
-import { SortController } from './sort'
-import { GraphDisplayManager } from './graph'
-import { PercentageBar } from './percbar'
-import { FavoritesManager } from './favorites'
-import { Tooltip, Caption, formatNumber } from './util'
+await import { ServerRegistry } from './servers'
+await import { SocketManager } from './socket'
+await import { SortController } from './sort'
+await import { GraphDisplayManager } from './graph'
+await import { PercentageBar } from './percbar'
+await import { FavoritesManager } from './favorites'
+await import { Tooltip, Caption, formatNumber } from './util'
 
 export class App {
   publicConfig

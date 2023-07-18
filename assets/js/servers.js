@@ -1,11 +1,11 @@
-import uPlot from 'uplot'
+await import uPlot from 'uplot'
 
-import { RelativeScale } from './scale'
+await import { RelativeScale } from './scale'
 
-import { formatNumber, formatTimestampSeconds, formatDate, formatMinecraftServerAddress, formatMinecraftVersions } from './util'
-import { uPlotTooltipPlugin } from './plugins'
+await import { formatNumber, formatTimestampSeconds, formatDate, formatMinecraftServerAddress, formatMinecraftVersions } from './util'
+await import { uPlotTooltipPlugin } from './plugins'
 
-import MISSING_FAVICON from 'url:../images/missing_favicon.svg'
+await import MISSING_FAVICON from 'url:../images/missing_favicon.svg'
 
 export class ServerRegistry {
   constructor (app) {
